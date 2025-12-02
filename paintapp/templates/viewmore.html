@@ -1,0 +1,73 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="page-notification">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="{% url 'paintapp:index' %}">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">View</a></li> 
+                                <li class="breadcrumb-item"><a href="#">View More</a></li> 
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="container py-5">
+
+    <!-- Artist Section -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-6 text-center">
+
+            <h1 class="mb-3">Artist</h1>
+
+            {% if user.profile_picture %}
+                <img src="{{ user.profile_picture.url }}"
+                     class="img-fluid rounded shadow"
+                     style="max-height: 300px; object-fit: cover;">
+            {% else %}
+                <img src="https://i.postimg.cc/76Cf9P4F/m-default.png"
+                     class="img-fluid rounded shadow"
+                     style="max-height: 300px; object-fit: cover;">
+            {% endif %}
+
+            <h4 class="mt-4 mb-2"><strong>Name:</strong> {{ user.name }}</h4>
+            <h4 class="mb-4"><strong>Email:</strong> {{ user.email }}</h4>
+
+        </div>
+    </div>
+
+    <!-- Art Details Section -->
+    <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+
+            <h1 class="mb-4">Art Details</h1>
+
+            {% for i in art %}
+                <div class="card mb-4 shadow-sm p-3">
+
+                    <img src="{{ i.uploadimage.url }}"
+                         class="img-fluid rounded mb-3"
+                         style="max-height: 350px; object-fit: cover;">
+
+                    <h2 class="mb-2">Name: {{ i.imagename }}</h2>
+                    <h5 class="text-secondary mb-3">Description: {{ i.description }}</h5>
+
+                    <h3 class="text-success fw-bold mb-3">Price: ₹{{ i.price }}</h3>
+
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+

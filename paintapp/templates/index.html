@@ -1,0 +1,562 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fashion | Teamplate</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico'%}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.css'%}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css'%}">
+    <link rel="stylesheet" href="{% static 'css/progressbar_barfiller.css'%}">
+    <link rel="stylesheet" href="{% static 'css/gijgo.css'%}">
+    <link rel="stylesheet" href="{% static 'css/animate.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/animated-headline.css'%}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css'%}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome-all.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css'%}">
+    <link rel="stylesheet" href="{% static 'css/slick.css'%}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    
+</head>
+<body class="full-wrapper">
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="{% static 'img/logo/loder.png'%}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start-->
+    <header>
+        <!-- Header Start -->
+        <div class="header-area ">
+            <div class="main-header header-sticky">
+                <div class="container-fluid">
+                    <div class="menu-wrapper d-flex align-items-center justify-content-between">
+                        <div class="header-left d-flex align-items-center">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a href="{% url 'paintapp:index' %}"><img src="{% static 'img/logo/logo.png'%}" alt=""></a>
+                            </div>
+                            <!-- Main-menu -->
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="{% url 'paintapp:index' %}">Home</a></li> 
+                                        <li><a href="{% url 'paintapp:shop' %}">shop</a></li>
+                                        <li><a href="{% url 'paintapp:about' %}">About</a></li>
+                                        <li><a href="{% url 'paintapp:blog' %}">Blog</a>
+                                            <ul class="submenu">
+                                                <li><a href="{% url 'paintapp:blog' %}">Blog</a></li>
+                                                <li><a href="{% url 'paintapp:blogdetails' %}">Blog Details</a></li>
+                                                <li><a href="{% url 'paintapp:elements' %}">Elements</a></li>
+                                                <li><a href="{% url 'paintapp:productdetails' %}">Product Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url 'paintapp:contact' %}">Contact</a></li>
+                                        <li><a href="{% url 'paintapp:upload' %}">Upload</a></li>
+                                        <li><a href="{% url 'paintapp:profile' %}">Profile</a></li>
+                                        <li><a href="{% url 'paintapp:cart' %}">Cart</a></li>
+                                        <li><a href="{% url 'paintapp:wishlist' %}">Wishlist</a></li>
+                                    </ul>
+                                </nav>
+                            </div>   
+                        </div>
+                        <div class="header-right1 d-flex align-items-center">
+                            <!-- Social -->
+                            <div class="header-social d-none d-md-block">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                            </div>
+                            <!-- Search Box -->
+                            <div class="search d-none d-md-block">
+                                <ul class="d-flex align-items-center">
+                                    <li class="mr-15">
+                                        <div class="nav-search search-switch">
+                                            <i class="ti-search"></i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card-stor">
+                                            <img src="{% static 'img/gallery/card.svg'%}" alt="">
+                                            <span>0</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <!-- header end -->
+     {% block content %}
+    <main>
+        <!--? Hero Area Start-->
+        <div class="container-fluid">
+            <div class="slider-area">
+                <!-- Mobile Device Show Menu-->
+                <div class="header-right2 d-flex align-items-center">
+                    <!-- Social -->
+                    <div class="header-social  d-block d-md-none">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                    <!-- Search Box -->
+                    <div class="search d-block d-md-none" >
+                        <ul class="d-flex align-items-center">
+                            <li class="mr-15">
+                                <div class="nav-search search-switch">
+                                    <i class="ti-search"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card-stor">
+                                    <img src="{% static 'img/gallery/card.svg'%}" alt="">
+                                    <span>0</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /End mobile  Menu-->
+
+                <div class="slider-active dot-style">
+                    <!-- Single -->
+                    <div class="single-slider slider-bg1 hero-overly slider-height d-flex align-items-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-xl-8 col-lg-9">
+                                    <!-- Hero Caption -->
+                                    <div class="hero__caption">
+                                        <h1>fashion<br>changing<br>always</h1>
+                                        <a href="{% url 'paintapp:shop' %}" class="btn">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single -->
+                    <div class="single-slider slider-bg2 hero-overly slider-height d-flex align-items-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-xl-8 col-lg-9">
+                                    <!-- Hero Caption -->
+                                    <div class="hero__caption">
+                                        <h1>fashion<br>changing<br>always</h1>
+                                        <a href="{% url 'paintapp:shop' %}" class="btn">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single -->
+                    <div class="single-slider slider-bg3 hero-overly slider-height d-flex align-items-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-xl-8 col-lg-9">
+                                    <!-- Hero Caption -->
+                                    <div class="hero__caption">
+                                        <h1>fashion<br>changing<br>always</h1>
+                                        <a href="{% url 'paintapp:shop' %}" class="btn">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Hero -->
+        <!--? Popular Items Start -->
+        <div class="popular-items pt-50">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-popular-items mb-50 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                            <div class="popular-img">
+                                <img src="{% static 'img/gallery/popular1.png'%}" alt="">
+                                <div class="img-cap">
+                                    <span>Glasses</span>
+                                </div>
+                                <div class="favorit-items">
+                                 <a href="{% url 'paintapp:shop' %}" class="btn">Shop Now</a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-popular-items mb-50 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                        <div class="popular-img">
+                            <img src="{% static 'img/gallery/popular2.png'%}" alt="">
+                            <div class="img-cap">
+                                <span>Watches</span>
+                            </div>
+                            <div class="favorit-items">
+                             <a href="{% url 'paintapp:shop' %}" class="btn">Shop Now</a>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-popular-items mb-50 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                    <div class="popular-img">
+                        <img src="{% static 'img/gallery/popular3.png'%}" alt="">
+                        <div class="img-cap">
+                            <span>Jackets</span>
+                        </div>
+                        <div class="favorit-items">
+                         <a href="{% url 'paintapp:shop' %}" class="btn">Shop Now</a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="single-popular-items mb-50 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+                <div class="popular-img">
+                    <img src="{% static 'img/gallery/popular4.png'%}" alt="">
+                    <div class="img-cap">
+                        <span>Clothes</span>
+                    </div>
+                    <div class="favorit-items">
+                     <a href="{% url 'paintapp:shop' %}" class="btn">Shop Now</a>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+</div>
+</div>
+<!-- Popular Items End -->
+<!--? New Arrival Start -->
+<div class="new-arrival">
+    <div class="container">
+        <!-- Section tittle -->
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-10">
+                <div class="section-tittle mb-60 text-center wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                    <h2>new<br>arrival</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for i in paints %}
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                <div class="single-new-arrival mb-50 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                    <div class="popular-img">
+                        {% if i.uploadimage %}
+                        <img width="300px" height="300px" src="{{i.uploadimage.url}}" alt="">
+                        {% else %}
+                        <img src="data:image/jpeg;base64,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" alt="">
+                        {% endif %}
+                        <div class="favorit-items">
+                            <!-- <span class="flaticon-heart"></span> -->
+                            <img src="{% static 'img/gallery/favorit-card.png'%}" alt="">   
+                        </div>
+                    </div>
+                    <div class="popular-caption">
+                        <h3><a href="{% url 'paintapp:imageview' i.id %}">{{i.imagename}}</a></h3>
+                        <span>{{i.description}}</span>
+                        <div class="rating mb-10">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span>{{i.price}}</span>
+                    </div>
+                </div>
+                
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Button -->
+<div class="row justify-content-center">
+    <div class="room-btn">
+        <a href="catagori.html" class="border-btn">Browse More</a>
+    </div>
+</div>
+</div>
+</div>
+<!--? New Arrival End -->
+<!--? collection -->
+<section class="collection section-bg2 section-padding30 section-over1 ml-15 mr-15" data-background="{% static 'img/gallery/section_bg01.png">
+    <div class="container-fluid"></div>
+    <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-9">
+            <div class="single-question text-center">
+                <h2 class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".1s">collection houses our first-ever</h2>
+                <a href="{% url 'paintapp:about' %}" class="btn class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".4s">About Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- End collection -->
+<!--? Popular Locations Start 01-->
+<div class="popular-product pt-50">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="single-product mb-50">
+                    <div class="location-img">
+                        <img src="{% static 'img/gallery/popular-imtes1.png'%}" alt="">
+                    </div>
+                    <div class="location-details">
+                        <p><a href="{% url 'paintapp:productdetails' %}">Established fact that by the<br> readable content</a></p>
+                        <a href="{% url 'paintapp:productdetails' %}" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="single-product mb-50">
+                    <div class="location-img">
+                        <img src="{% static 'img/gallery/popular-imtes2.png'%}" alt="">
+                    </div>
+                    <div class="location-details">
+                        <p><a href="{% url 'paintapp:productdetails' %}">Established fact that by the<br> readable content</a></p>
+                        <a href="{% url 'paintapp:productdetails' %}" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Popular Locations End -->
+<!--? Services Area Start -->
+<div class="categories-area section-padding40 gray-bg">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-cat mb-50 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                    <div class="cat-icon">
+                        <img src="{% static 'img/icon/services1.svg'%}" alt="">
+                    </div>
+                    <div class="cat-cap">
+                        <h5>Fast & Free Delivery</h5>
+                        <p>Free delivery on all orders</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-cat mb-50 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                    <div class="cat-icon">
+                        <img src="{% static 'img/icon/services2.svg'%}" alt="">
+                    </div>
+                    <div class="cat-cap">
+                        <h5>Fast & Free Delivery</h5>
+                        <p>Free delivery on all orders</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-cat mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                    <div class="cat-icon">
+                        <img src="{% static 'img/icon/services3.svg'%}" alt="">
+                    </div>
+                    <div class="cat-cap">
+                        <h5>Fast & Free Delivery</h5>
+                        <p>Free delivery on all orders</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-cat wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                    <div class="cat-icon">
+                        <img src="{% static 'img/icon/services4.svg'%}" alt="">
+                    </div>
+                    <div class="cat-cap">
+                        <h5>Fast & Free Delivery</h5>
+                        <p>Free delivery on all orders</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--? Services Area End -->
+</main>
+<footer>
+    {% endblock %}
+    <!-- Footer Start-->
+    <div class="footer-area footer-padding">
+        <div class="container-fluid ">
+            <div class="row d-flex justify-content-between">
+                <div class="col-xl-3 col-lg-3 col-md-8 col-sm-8">
+                 <div class="single-footer-caption mb-50">
+                   <div class="single-footer-caption mb-30">
+                      <!-- logo -->
+                      <div class="footer-logo mb-35">
+                       <a href="{% url 'paintapp:index' %}"><img src="{% static 'img/logo/logo2_footer.png'%}" alt=""></a>
+                   </div>
+                   <div class="footer-tittle">
+                       <div class="footer-pera">
+                           <p>Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
+                       </div>
+                   </div>
+                   <!-- social -->
+                   <div class="footer-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
+        <div class="single-footer-caption mb-50">
+            <div class="footer-tittle">
+                <h4>Quick links</h4>
+                <ul>
+                    <li><a href="#">Image Licensin</a></li>
+                    <li><a href="#">Style Guide</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
+        <div class="single-footer-caption mb-50">
+            <div class="footer-tittle">
+                <h4>Shop Category</h4>
+                <ul>
+                    <li><a href="#">Image Licensin</a></li>
+                    <li><a href="#">Style Guide</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
+        <div class="single-footer-caption mb-50">
+            <div class="footer-tittle">
+                <h4>Pertners</h4>
+                <ul>
+                    <li><a href="#">Image Licensin</a></li>
+                    <li><a href="#">Style Guide</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4">
+        <div class="single-footer-caption mb-50">
+            <div class="footer-tittle">
+                <h4>Get in touch</h4>
+                <ul>
+                    <li><a href="#">(89) 982-278 356</a></li>
+                    <li><a href="#">demo@colorlib.com</a></li>
+                    <li><a href="#">67/A, Colorlib, Green road, NYC</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!-- footer-bottom area -->
+<div class="footer-bottom-area">
+    <div class="container">
+        <div class="footer-border">
+           <div class="row d-flex align-items-center">
+               <div class="col-xl-12 ">
+                   <div class="footer-copy-right text-center">
+                       <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Footer End-->
+</footer>
+<!--? Search model Begin -->
+<div class="search-model-box">
+    <div class="h-100 d-flex align-items-center justify-content-center">
+        <div class="search-close-btn">+</div>
+        <form class="search-model-form">
+            <input type="text" id="search-input" placeholder="Searching key.....">
+        </form>
+    </div>
+</div>
+<!-- Search model end -->
+<!-- Scroll Up -->
+<div id="back-top" >
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
+
+<!-- JS here -->
+<!-- Jquery, Popper, Bootstrap -->
+<script src="{% static 'js/vendor/modernizr-3.5.0.min.js'%}"></script>
+<script src="{% static 'js/vendor/jquery-1.12.4.min.js'%}"></script>
+<script src="{% static 'js/popper.min.js'%}"></script>
+<script src="{% static 'js/bootstrap.min.js'%}"></script>
+
+<!-- Slick-slider , Owl-Carousel ,slick-nav -->
+<script src="{% static 'js/owl.carousel.min.js'%}"></script>
+<script src="{% static 'js/slick.min.js'%}"></script>
+<script src="{% static 'js/jquery.slicknav.min.js'%}"></script>
+
+<!-- One Page, Animated-HeadLin, Date Picker -->
+<script src="{% static 'js/wow.min.js'%}"></script>
+<script src="{% static 'js/animated.headline.js'%}"></script>
+<script src="{% static 'js/jquery.magnific-popup.js'%}"></script>
+<script src="{% static 'js/gijgo.min.js'%}"></script>
+
+<!-- Nice-select, sticky,Progress -->
+<script src="{% static 'js/jquery.nice-select.min.js'%}"></script>
+<script src="{% static 'js/jquery.sticky.js'%}"></script>
+<script src="{% static 'js/jquery.barfiller.js'%}"></script>
+
+<!-- counter , waypoint,Hover Direction -->
+<script src="{% static 'js/jquery.counterup.min.js'%}"></script>
+<script src="{% static 'js/waypoints.min.js'%}"></script>
+<script src="{% static 'js/jquery.countdown.min.js'%}"></script>
+<script src="{% static 'js/hover-direction-snake.min.js'%}"></script>
+
+<!-- contact js -->
+<script src="{% static 'js/contact.js'%}"></script>
+<script src="{% static 'js/jquery.form.js'%}"></script>
+<script src="{% static 'js/jquery.validate.min.js'%}"></script>
+<script src="{% static 'js/mail-script.js'%}"></script>
+<script src="{% static 'js/jquery.ajaxchimp.min.js'%}"></script>
+
+<!-- Jquery Plugins, main Jquery -->	
+<script src="{% static 'js/plugins.js'%}"></script>
+<script src="{% static 'js/main.js'%}"></script>
+
+</body>
+</html>

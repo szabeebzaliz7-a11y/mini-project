@@ -1,0 +1,69 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="row">
+
+        <!-- Painting Image -->
+        <div class="col-md-6">
+            <img src="{{ buy_item.uploadimage.url }}" 
+                 class="img-fluid rounded shadow"
+                 alt="{{ buylist.imagename }}">
+        </div>
+
+        <!-- Painting Details -->
+        <div class="col-md-6">
+
+            <h2 class="fw-bold">{{ buy_item.imagename }}</h2>
+
+            <p class="text-muted">
+                {{ buy_item.description }}
+            </p>
+
+            <h3 class="text-success fw-bold">
+                ₹ {{ buy_item.price }}
+            </h3>
+            {% if messages %}
+            {% for message in messages %}
+            {{message}}
+            {% endfor %}
+            {% endif %}
+    <div class="d-flex align-items-center mt-4">
+    <a href="{% url 'paintapp:updatequantity' buy_item.id 'minus' %}" 
+       class="btn btn-outline-secondary">-</a>
+
+    <input id="quantity" type="text" 
+           value="{% if citem %}{{ citem.quantity }}{% else %}1{% endif %}" 
+           class="form-control text-center mx-2" 
+           style="width:80px;" readonly>
+
+    <a href="{% url 'paintapp:updatequantity' buy_item.id 'plus' %}" 
+       class="btn btn-outline-secondary">+</a>
+    </div>
+            <!-- Action Buttons -->
+            <div class="d-flex gap-3 mt-4">
+
+                <a id="buyBtn"
+                   href="?qty=1"
+                   class="btn btn-primary btn-lg">
+                    Buy Now
+                </a>
+
+                <a id="cartBtn"
+                   href=""
+                   class="btn btn-dark btn-lg">
+                    Add to Cart
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+

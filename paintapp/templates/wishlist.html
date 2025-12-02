@@ -1,0 +1,58 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+   
+{% if messages %}
+{% for message in messages %}
+{{message}}
+{% endfor %}
+{% endif %}
+
+<div class="container py-5">
+
+    <!-- Page Heading -->
+    <h1 class="text-center mb-5">Wishlisted Item</h1>
+
+    <div class="row justify-content-center">
+
+        {% for i in item %}
+        <div class="col-lg-6">
+
+            <div class="card shadow-sm mb-4 p-4 text-center">
+
+                <!-- Art Image -->
+                <img src="{{ i.art.uploadimage.url }}"
+                     class="img-fluid rounded mb-3 mx-auto"
+                     style="max-height: 300px; object-fit: cover;"
+                     alt="{{ i.art.name }}">
+
+                <!-- Art Details -->
+                <h2 class="mb-3">Name: {{ i.art.imagename }}</h2>
+
+                <h4 class="mb-2 text-secondary">
+                    Description: {{ i.art.description }}
+                </h4>
+
+                <h3 class="text-success fw-bold mb-1">
+                    Price: ₹{{ i.art.price }}
+                </h3>
+
+            </div>
+
+        </div>
+        {% endfor %}
+
+    </div>
+
+    <!-- Continue Shopping Button -->
+    <div class="text-center mt-4">
+        <a href="{% url 'paintapp:index' %}" class="btn btn-primary px-4">
+            Continue Shopping
+        </a>
+    </div>
+
+</div>
+
+
+
+{% endblock %}
