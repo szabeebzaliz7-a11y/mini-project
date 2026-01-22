@@ -21,7 +21,7 @@ from  django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ff',include('paintapp.urls')),
+    path('paintapp',include('paintapp.urls')),
     path('',include('dashboard.urls')),
 ]
 if settings.DEBUG:
