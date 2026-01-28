@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-it($rj(*sku4!3ls$khigsmyh#uyb#i(i)(&41ucr&v&n2dpb3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.31.42.42', 'localhost', '127.0.0.1', '3.111.245.220']
+ALLOWED_HOSTS = ['172.31.42.42', 'localhost', '127.0.0.1', '3.111.245.220' , 'techiesinnovation.tech']
 
 
 # Application definition
@@ -86,14 +86,14 @@ WSGI_APPLICATION = 'paintings.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': "masterdatabase",
-        'USER': "master",
-        'PASSWORD': "Zabeeb123",
-        'HOST': "database-1.chc0qkkaai9x.ap-south-1.rds.amazonaws.com",
+        'NAME': "zabeebdatabase",
+        'USER': "database2",
+        'PASSWORD': "Database123",
+        'HOST': "database-2.chc0qkkaai9x.ap-south-1.rds.amazonaws.com",
         'PORT': 5432,
     }
 }
-
+#new deb
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
