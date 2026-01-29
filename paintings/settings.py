@@ -163,11 +163,12 @@ AWS_S3_OBJECT_PARAMETERS = {
 }
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-# Use S3 for storing static files
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/')]
 # # Static files
 STATICFILES_STORAGE = 'home.storage_backends.StaticStorage'
 STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
+# Use S3 for storing static files
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/')]
+
 
 # # Media files
 DEFAULT_FILE_STORAGE = 'home.storage_backends.MediaStorage'
